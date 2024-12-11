@@ -36,6 +36,14 @@
     <string name="img_description3">Critter McCool with the largest section of honeycomb removed from a structure in the world</string>
 
     //Time and Date
+    <string name="when">When Would You Like To Request An Appointment For?</string>
+    <string name="fillInInfo">Please fill in the information below</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="finishBtn">Finish</string>
 
     //Confirmation
+    <string name="requested">Your appointment has been requested successfully!</string>
+    <string name="awaitConfirmation">You will be contacted ASAP to officially confirm your appointment.</string>
+    <string name="okBtn">Ok</string>
 </resources>

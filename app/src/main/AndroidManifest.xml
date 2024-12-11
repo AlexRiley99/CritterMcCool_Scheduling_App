@@ -13,6 +13,12 @@
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".Confirmation"
+            android:exported="false" />
+        <activity
+            android:name=".DateTime"
+            android:exported="false" />
+        <activity
             android:name=".AppointmentInfo"
             android:exported="false" />
         <activity
