@@ -1,3 +1,41 @@
 <resources>
-    <string name="app_name">CritterMcCoolScheduling</string>
+    //Main
+    <string name="app_name">Critter McCool Appointment Scheduling</string>
+    <string name="img_description1">Critter McCool with 5-Foot Yellow Jacket Nest - Post and Courier 2022</string>
+    <string name="title_txt">Critter McCool</string>
+    <string name="subtitle">The Authority On Stinging Insect Control</string>
+    <string name="address_ln1">700 Nexton Square Dr</string>
+    <string name="address_ln2">Summerville, SC</string>
+    <string name="office_phone">Office Phone: 843-670-8623</string>
+    <string name="email">Email: crittermccool@gmail.com</string>
+    <string name="img_description2">Save The Pollinators Certification</string>
+    <string name="schedule_btn">Request An Appointment</string>
+    <string name="website">Official Website: https://crittermccool.com</string>
+
+    //Appointment Info
+    <string name="insectType">What Type Of Stinging Insect Is It?</string>
+    <string-array name="insectType">
+        <item>Bees</item>
+        <item>Wasps</item>
+        <item>Yellow Jackets</item>
+        <item>Hornets</item>
+        <item>Other</item>
+        <item>Not Sure</item>
+    </string-array>
+    <string name="duration">How Long Has The Problem Been Going On?</string>
+    <string name="duration_hint">Ex: 1 week</string>
+    <string name="your_info">Please Enter Your Information Below:</string>
+    <string name="name_hint">First and Last Name</string>
+    <string name="phone_hint">Phone Number</string>
+    <string name="address_hint">Address of Service</string>
+    <string name="email_hint">Email Address</string>
+    <string name="next_btn">Next</string>
+    <string name="img_description5">Bees</string>
+    <string name="img_description4">Critter McCool standing next to a bee hive</string>
+
+    <string name="img_description3">Critter McCool with the largest section of honeycomb removed from a structure in the world</string>
+
+    //Time and Date
+
+    //Confirmation
 </resources>
