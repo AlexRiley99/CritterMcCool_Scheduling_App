@@ -1,6 +1,8 @@
 package com.example.crittermccoolscheduling
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -16,5 +18,12 @@ class DateTime : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        //Handler for the "Finish" button
+        val Finish_Btn: Button = findViewById(R.id.Finish_Btn)
+        Finish_Btn.setOnClickListener{
+            val intent = Intent(this, Confirmation::class.java)
+            startActivity(intent)
+        }
     }
+
 }

@@ -79,7 +79,7 @@
         app:layout_constraintVertical_bias="0.5" />
 
     <Button
-        android:id="@+id/finishBtn"
+        android:id="@+id/Finish_Btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="158dp"
@@ -103,7 +103,7 @@
         android:layout_width="253dp"
         android:layout_height="200dp"
         android:contentDescription="@string/img_description3"
-        app:layout_constraintBottom_toTopOf="@+id/finishBtn"
+        app:layout_constraintBottom_toTopOf="@+id/Finish_Btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
