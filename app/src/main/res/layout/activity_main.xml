@@ -156,4 +156,22 @@
         app:layout_constraintTop_toBottomOf="@+id/RequestAppointment_Btn"
         app:layout_constraintVertical_bias="0.5" />
 
+    <Button
+        android:id="@+id/adminLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="310dp"
+        android:layout_marginBottom="21dp"
+        android:backgroundTint="#F2ECCB "
+        android:fontFamily="serif-monospace"
+        android:text="@string/adminLogin_btn"
+        android:textColor="#634801"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/website" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

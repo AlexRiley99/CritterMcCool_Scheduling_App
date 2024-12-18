@@ -13,6 +13,13 @@
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".Admin"
+            android:exported="false" />
+        <activity
+            android:name=".AdminLogin"
+            android:exported="false"
+            android:label="@string/title_activity_admin_login" />
+        <activity
             android:name=".InfoConfirmation"
             android:exported="false" />
         <activity

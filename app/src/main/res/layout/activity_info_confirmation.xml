@@ -16,6 +16,7 @@
         android:layout_marginTop="1dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="20dp"
+        android:contentDescription="Critter McCool"
         app:layout_constraintBottom_toTopOf="@+id/infoCorrectYN"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,8 +45,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="33dp"
         android:backgroundTint="#3A2902"
+        android:fontFamily="serif-monospace"
         android:text="@string/noBtn"
         android:textColor="#F2ECCB "
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/yesBtn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/yesBtn" />
@@ -59,8 +62,10 @@
         android:layout_marginEnd="33dp"
         android:layout_marginBottom="33dp"
         android:backgroundTint="#3A2902"
+        android:fontFamily="serif-monospace"
         android:text="@string/yesBtn"
         android:textColor="#F2ECCB "
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/noBtn"
@@ -70,15 +75,18 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="49dp"
         android:fontFamily="serif-monospace"
         android:text="@string/typeOfInsect"
         android:textColor="#3A2902"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toStartOf="@+id/textView11"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/infoCorrectYN"
-        app:layout_constraintVertical_bias="0.5"
-        tools:layout_editor_absoluteX="28dp" />
+        app:layout_constraintVertical_bias="0.5" />
 
     <TextView
         android:id="@+id/textView4"
@@ -180,9 +188,9 @@
 
     <TextView
         android:id="@+id/textView18"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="88dp"
+        android:layout_marginEnd="8dp"
         android:fontFamily="serif-monospace"
         android:text="@string/requestedDate_txt"
         android:textColor="#634801"
@@ -195,7 +203,7 @@
 
     <TextView
         android:id="@+id/textView17"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:fontFamily="serif-monospace"
         android:text="@string/requestedTime_txt"
@@ -209,7 +217,7 @@
 
     <TextView
         android:id="@+id/textView14"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:fontFamily="serif-monospace"
         android:text="@string/phoneNumber_txt"
@@ -223,7 +231,7 @@
 
     <TextView
         android:id="@+id/textView13"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:fontFamily="serif-monospace"
         android:text="@string/fullName_txt"
@@ -237,7 +245,7 @@
 
     <TextView
         android:id="@+id/textView16"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:fontFamily="serif-monospace"
         android:text="@string/emailAddress_txt"
@@ -251,7 +259,7 @@
 
     <TextView
         android:id="@+id/textView12"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:fontFamily="serif-monospace"
         android:text="@string/durationOfProblem_txt"
@@ -265,7 +273,7 @@
 
     <TextView
         android:id="@+id/textView15"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:fontFamily="serif-monospace"
         android:text="@string/serviceAddress_txt"
@@ -279,7 +287,7 @@
 
     <TextView
         android:id="@+id/textView11"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:fontFamily="serif-monospace"
         android:text="@string/typeOfInsect_txt"

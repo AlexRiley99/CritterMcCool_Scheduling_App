@@ -17,5 +17,12 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, AppointmentInfo::class.java)
             startActivity(intent)
         }
+
+        //Handler for the "Admin" button
+        val adminLogin_Btn: Button = findViewById(R.id.adminLogin)
+        adminLogin_Btn.setOnClickListener{
+            val intent = Intent(this, AdminLogin::class.java)
+            startActivity(intent)
+        }
     }
 }

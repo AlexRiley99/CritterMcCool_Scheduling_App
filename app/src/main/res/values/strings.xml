@@ -10,7 +10,15 @@
     <string name="email">Email: crittermccool@gmail.com</string>
     <string name="img_description2">Save The Pollinators Certification</string>
     <string name="schedule_btn">Request An Appointment</string>
+    <string name="adminLogin_btn">Admin</string>
     <string name="website">Official Website: https://crittermccool.com</string>
+
+    //Admin Login
+    <string name="adminLogin_header">Sign In As Administrator</string>
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="login_btn">Sign In</string>
+    <string name="back_btn">Back</string>
 
     //Appointment Info
     <string name="other_hint">If you selected "other", please specify here</string>
@@ -59,4 +67,8 @@
     <string name="requested">Your appointment has been requested successfully!</string>
     <string name="awaitConfirmation">You will be contacted ASAP to officially confirm your appointment.</string>
     <string name="okBtn">Ok</string>
+    <string name="title_activity_admin_login">AdminLogin</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>
