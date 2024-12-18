@@ -2,7 +2,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/problemDuration"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F2ECCB"
@@ -82,8 +81,6 @@
         android:id="@+id/Finish_Btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="158dp"
-        android:layout_marginEnd="165dp"
         android:backgroundTint="#3A2902"
         android:fontFamily="serif-monospace"
         android:text="@string/finishBtn"
@@ -94,7 +91,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dateTime_back_btn"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_bias="0.5" />
 
@@ -110,5 +107,23 @@
         app:layout_constraintTop_toBottomOf="@+id/date"
         app:layout_constraintVertical_bias="0.5"
         app:srcCompat="@drawable/crittermccool3" />
+
+    <Button
+        android:id="@+id/dateTime_back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#3A2902"
+        android:fontFamily="serif-monospace"
+        android:text="@string/timeDate_back_btn"
+        android:textAlignment="center"
+        android:textColor="#F2ECCB"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Finish_Btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

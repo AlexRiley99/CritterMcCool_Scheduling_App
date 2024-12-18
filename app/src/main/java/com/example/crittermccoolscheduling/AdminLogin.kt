@@ -32,6 +32,14 @@ class AdminLogin : AppCompatActivity() {
                 username_txt.text.clear()
                 password_txt.text.clear()
             }
+
+        //Handler for "Back" button
+        val back_Btn: Button = findViewById(R.id.adminLogin_back_btn)
+        back_Btn.setOnClickListener{
+                //Take the user back to the main page
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+            }
         }
     }
 }

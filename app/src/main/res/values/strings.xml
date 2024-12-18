@@ -18,7 +18,7 @@
     <string name="username_hint">Username</string>
     <string name="password_hint">Password</string>
     <string name="login_btn">Sign In</string>
-    <string name="back_btn">Back</string>
+    <string name="adminLogin_back_btn">Back</string>
 
     //Appointment Info
     <string name="other_hint">If you selected "other", please specify here</string>
@@ -32,6 +32,7 @@
     <string name="next_btn">Next</string>
     <string name="img_description5">Bees</string>
     <string name="img_description4">Critter McCool standing next to a bee hive</string>
+    <string name="appointmentInfo_back_btn">Back</string>
 
     <string name="img_description3">Critter McCool with the largest section of honeycomb removed from a structure in the world</string>
 
@@ -41,6 +42,7 @@
     <string name="date">Date</string>
     <string name="time">Time</string>
     <string name="finishBtn">Finish</string>
+    <string name="timeDate_back_btn">Back</string>
 
     //Info Confirmation
     <string name="infoCorrectYN">Is all of the information below correct?:</string>

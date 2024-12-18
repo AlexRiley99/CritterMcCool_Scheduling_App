@@ -116,6 +116,10 @@
         android:id="@+id/Next_Btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginBottom="12dp"
         android:backgroundTint="#3A2902"
         android:fontFamily="serif-monospace"
         android:text="@string/next_btn"
@@ -124,10 +128,8 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailAddress"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintStart_toEndOf="@+id/appointmentInfo_back_btn"
+        app:layout_constraintTop_toBottomOf="@+id/emailAddress" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/fullName"
@@ -192,5 +194,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/insectType"
         app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/appointmentInfo_back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="22dp"
+        android:backgroundTint="#3A2902"
+        android:fontFamily="serif-monospace"
+        android:text="@string/appointmentInfo_back_btn"
+        android:textAlignment="center"
+        android:textColor="#F2ECCB"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/Next_Btn"
+        app:layout_constraintEnd_toStartOf="@+id/Next_Btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailAddress" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
