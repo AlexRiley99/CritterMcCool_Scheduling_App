@@ -21,7 +21,6 @@
     <string name="adminLogin_back_btn">Back</string>
 
     //Appointment Info
-    <string name="other_hint">If you selected "other", please specify here</string>
     <string name="duration">*How Long Has The Problem Been Going On?</string>
     <string name="duration_hint">Ex: 1 week</string>
     <string name="your_info">*Please Enter Your Information Below:</string>
@@ -46,21 +45,21 @@
 
     //Info Confirmation
     <string name="infoCorrectYN">Is all of the information below correct?:</string>
-    <string name="typeOfInsect">Type of Insect: </string>
+    <string name="typeOfInsect">Insect: </string>
     <string name="typeOfInsect_txt"></string>
-    <string name="durationOfProblem">Duration of The Problem: </string>
+    <string name="durationOfProblem">Duration: </string>
     <string name="durationOfProblem_txt"></string>
-    <string name="fullName">Your Name: </string>
+    <string name="fullName">Name: </string>
     <string name="fullName_txt"></string>
-    <string name="phoneNumber">Your Phone Number: </string>
+    <string name="phoneNumber">Phone: </string>
     <string name="phoneNumber_txt"></string>
-    <string name="serviceAddress">Address Being Serviced: </string>
+    <string name="serviceAddress">Address: </string>
     <string name="serviceAddress_txt"></string>
-    <string name="emailAddress">Your Email: </string>
+    <string name="emailAddress">Email: </string>
     <string name="emailAddress_txt"></string>
-    <string name="requestedTime">Requested Appointment Time: </string>
+    <string name="requestedTime">Requested Time: </string>
     <string name="requestedTime_txt"></string>
-    <string name="requestedDate">Requested Appointment Date: </string>
+    <string name="requestedDate">Requested Date: </string>
     <string name="requestedDate_txt"></string>
     <string name="yesBtn">Yes</string>
     <string name="noBtn">No</string>

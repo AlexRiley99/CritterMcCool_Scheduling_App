@@ -13,10 +13,12 @@ data class Appointment(
     val Email: String,
     val Address: String,
     val Insect_Type: String,
-    val Other: String,
-    val Problem_Duration: String
+    val Problem_Duration: String,
+    val Date: String,
+    val Time: String
 )
 
+//Handles database functions
 class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
     companion object{
         const val DATABASE_NAME = "Appointments.db"
@@ -30,8 +32,9 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         const val COLUMN_EMAIL = "Email"
         const val COLUMN_ADDRESS = "Address"
         const val COLUMN_INSECT_TYPE = "Insect_Type"
-        const val COLUMN_OTHER = "Other"
         const val COLUMN_PROBLEM_DURATION = "Problem_Duration"
+        const val COLUMN_DATE = "Date"
+        const val COLUMN_TIME = "Time"
     }
 
     override fun onCreate(db: SQLiteDatabase?){
@@ -43,8 +46,9 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
                 $COLUMN_EMAIL TEXT, 
                 $COLUMN_ADDRESS TEXT, 
                 $COLUMN_INSECT_TYPE TEXT, 
-                $COLUMN_OTHER TEXT, 
-                $COLUMN_PROBLEM_DURATION TEXT
+                $COLUMN_PROBLEM_DURATION TEXT,
+                $COLUMN_DATE TEXT,
+                $COLUMN_TIME TEXT
                 )
             """
         db?.execSQL(createTableQuery) //Execute SQL query to create the table
@@ -55,7 +59,7 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         onCreate(db) //Recreate table when upgrading database
     }
 
-    fun insertAppointment(Name: String, Phone: Int, Email: String, Address: String, Insect_Type: String, Other: String, Problem_Duration: String){
+    fun insertAppointment(Name: String, Phone: String, Email: String, Address: String, Insect_Type: String, Problem_Duration: String, Date: String, Time: String){
         val db = writableDatabase //get a writable SQLiteDatabase instance
         val contentValues = ContentValues()
         contentValues.put(COLUMN_NAME, Name)
@@ -63,8 +67,9 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         contentValues.put(COLUMN_EMAIL, Email)
         contentValues.put(COLUMN_ADDRESS, Address)
         contentValues.put(COLUMN_INSECT_TYPE, Insect_Type)
-        contentValues.put(COLUMN_OTHER, Other)
         contentValues.put(COLUMN_PROBLEM_DURATION, Problem_Duration)
+        contentValues.put(COLUMN_DATE, Date)
+        contentValues.put(COLUMN_TIME, Time)
 
         //Insert data into the table
         db.insert(TABLE_APPOINTMENTS, null, contentValues)
@@ -86,21 +91,23 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         val emailIndex = cursor.getColumnIndex(COLUMN_EMAIL)
         val addressIndex = cursor.getColumnIndex(COLUMN_ADDRESS)
         val insectTypeIndex = cursor.getColumnIndex(COLUMN_INSECT_TYPE)
-        val otherIndex = cursor.getColumnIndex(COLUMN_OTHER)
         val problemDurationIndex = cursor.getColumnIndex(COLUMN_PROBLEM_DURATION)
+        val dateIndex = cursor.getColumnIndex(COLUMN_DATE)
+        val timeIndex = cursor.getColumnIndex(COLUMN_TIME)
 
         while(cursor.moveToNext()){
-            if(nameIndex != -1 && phoneIndex != -1 && emailIndex != -1 && addressIndex != -1 && insectTypeIndex != -1 && otherIndex != -1 && problemDurationIndex != -1){
+            if(nameIndex != -1 && phoneIndex != -1 && emailIndex != -1 && addressIndex != -1 && insectTypeIndex != -1 && problemDurationIndex != -1 && dateIndex != -1 && timeIndex != -1){
                 val ID = cursor.getLong(idIndex)
                 val Name = cursor.getString(nameIndex)
                 val Phone = cursor.getString(phoneIndex)
                 val Email = cursor.getString(emailIndex)
                 val Address = cursor.getString(addressIndex)
                 val Insect_Type = cursor.getString(insectTypeIndex)
-                val Other = cursor.getString(otherIndex)
                 val Problem_Duration = cursor.getString(problemDurationIndex)
+                val Date = cursor.getString(dateIndex)
+                val Time = cursor.getString(timeIndex)
 
-                Appointments.add(Appointment(ID, Name, Phone, Email, Address, Insect_Type, Other, Problem_Duration))
+                Appointments.add(Appointment(ID, Name, Phone, Email, Address, Insect_Type, Problem_Duration, Date, Time))
             }
         }
         cursor.close() //close cursor
@@ -121,22 +128,24 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         val emailIndex = cursor.getColumnIndex(COLUMN_EMAIL)
         val addressIndex = cursor.getColumnIndex(COLUMN_ADDRESS)
         val insectTypeIndex = cursor.getColumnIndex(COLUMN_INSECT_TYPE)
-        val otherIndex = cursor.getColumnIndex(COLUMN_OTHER)
         val problemDurationIndex = cursor.getColumnIndex(COLUMN_PROBLEM_DURATION)
+        val dateIndex = cursor.getColumnIndex(COLUMN_DATE)
+        val timeIndex = cursor.getColumnIndex(COLUMN_TIME)
 
-        if(cursor.moveToFirst() && nameIndex != -1 && phoneIndex != -1 && emailIndex != -1 && addressIndex != -1 && insectTypeIndex != -1 && otherIndex != -1 && problemDurationIndex != -1){
+        if(cursor.moveToFirst() && nameIndex != -1 && phoneIndex != -1 && emailIndex != -1 && addressIndex != -1 && insectTypeIndex != -1 && problemDurationIndex != -1 && dateIndex != -1 && timeIndex != -1){
                 val ID = cursor.getLong(idIndex)
                 val Name = cursor.getString(nameIndex)
                 val Phone = cursor.getString(phoneIndex)
                 val Email = cursor.getString(emailIndex)
                 val Address = cursor.getString(addressIndex)
                 val Insect_Type = cursor.getString(insectTypeIndex)
-                val Other = cursor.getString(otherIndex)
                 val Problem_Duration = cursor.getString(problemDurationIndex)
+                val Date = cursor.getString(dateIndex)
+                val Time = cursor.getString(timeIndex)
 
             cursor.close()
             db.close()
-            return Appointment(ID, Name, Phone, Email, Address, Insect_Type, Other, Problem_Duration)
+            return Appointment(ID, Name, Phone, Email, Address, Insect_Type, Problem_Duration, Date, Time)
         }
         cursor.close()
         db.close()

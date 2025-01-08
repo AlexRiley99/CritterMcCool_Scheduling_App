@@ -1,14 +1,14 @@
-package com.example.crittermccoolscheduling
-
+import com.example.crittermccoolscheduling.R
 import android.content.Intent
-import android.os.Build.VERSION_CODES.R
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.Spinner
-import com.example.crittermccoolscheduling.R
+import android.widget.EditText
+import com.example.crittermccoolscheduling.DateTime
+import com.example.crittermccoolscheduling.MainActivity
 
 
 class AppointmentInfo : AppCompatActivity() {
@@ -29,11 +29,7 @@ class AppointmentInfo : AppCompatActivity() {
             //Handler for the "Next" button
             val Next_Btn: Button = findViewById(R.id.Next_Btn)
 
-            /*Next_Btn.setOnClickListener {
-                val intent = Intent(this, DateTime::class.java)
-                startActivity(intent)
-
-                val specifyOther_txt = findViewById<EditText>(R.id.specifyOther)//Text entered into the specifyOther field
+            Next_Btn.setOnClickListener {
                 val problemDuration_txt = findViewById<EditText>(R.id.problemDuration)//Text entered into the problemDuration field
                 val fullName_txt = findViewById<EditText>(R.id.fullName)//Text entered into the fullName field
                 val phoneNumber_txt = findViewById<EditText>(R.id.phoneNumber)//Information entered into the phoneNumber field
@@ -41,15 +37,16 @@ class AppointmentInfo : AppCompatActivity() {
                 val emailAddress_txt = findViewById<EditText>(R.id.emailAddress)//Text entered into the emailAddress field
                 val selectedItem = insectType.selectedItem//Item selected in the insectType spinner
 
-                //Keep prompt the user to enter information for any empty fields before allowing them to proceed
-                if(selectedItem.toString() == "*What Type of Stinging Insect Is It?" || (selectedItem.toString() == "Other" && specifyOther_txt.text.toString().trim().isEmpty()) || problemDuration_txt.text.toString().trim().isEmpty() || fullName_txt.text.toString().trim().isEmpty() || phoneNumber_txt.text.toString().trim().isEmpty() || serviceAddress_txt.text.toString().trim().isEmpty() || emailAddress_txt.text.toString().trim().isEmpty()){
-                    Toast.makeText(applicationContext, "*Please fill out all fields", Toast.LENGTH_SHORT).show()
-                }
-                else{
-                    //If a valid option is selected, go to the next page
-                    val intent = Intent(this, DateTime::class.java)
+                val intent = Intent(this, DateTime::class.java)
                     startActivity(intent)
-                }*/ //Commented out because it needs to be debugged
+                    intent.putExtra("fullName", fullName_txt.text.toString())
+                    intent.putExtra("phoneNumber", phoneNumber_txt.text.toString())
+                    intent.putExtra("emailAddress", emailAddress_txt.text.toString())
+                    intent.putExtra("serviceAddress", serviceAddress_txt.text.toString())
+                    intent.putExtra("insectType", selectedItem.toString())
+                    intent.putExtra("problemDuration", problemDuration_txt.text.toString())
+                    startActivity(intent)
+                } //Start DateTime and pass information to it
 
                 //Handler for the "Back" button
                 val Back_Btn: Button = findViewById(R.id.appointmentInfo_back_btn)

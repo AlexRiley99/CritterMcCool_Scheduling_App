@@ -83,7 +83,7 @@
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView4"
-        app:layout_constraintEnd_toStartOf="@+id/textView11"
+        app:layout_constraintEnd_toStartOf="@+id/insectTypeText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/infoCorrectYN"
         app:layout_constraintVertical_bias="0.5" />
@@ -187,10 +187,10 @@
         app:layout_constraintVertical_bias="0.5" />
 
     <TextView
-        android:id="@+id/textView18"
+        android:id="@+id/requestedDateText"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="15dp"
         android:fontFamily="serif-monospace"
         android:text="@string/requestedDate_txt"
         android:textColor="#634801"
@@ -198,11 +198,12 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/yesBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView17"
+        app:layout_constraintStart_toEndOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/requestedTimeText"
         app:layout_constraintVertical_bias="0.5" />
 
     <TextView
-        android:id="@+id/textView17"
+        android:id="@+id/requestedTimeText"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:fontFamily="serif-monospace"
@@ -210,13 +211,13 @@
         android:textColor="#634801"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView18"
-        app:layout_constraintEnd_toEndOf="@+id/textView18"
-        app:layout_constraintTop_toBottomOf="@+id/textView16"
+        app:layout_constraintBottom_toTopOf="@+id/requestedDateText"
+        app:layout_constraintEnd_toEndOf="@+id/requestedDateText"
+        app:layout_constraintTop_toBottomOf="@+id/emailAddressText"
         app:layout_constraintVertical_bias="0.5" />
 
     <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/phoneNumberText"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:fontFamily="serif-monospace"
@@ -224,13 +225,13 @@
         android:textColor="#634801"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView15"
-        app:layout_constraintEnd_toEndOf="@+id/textView15"
-        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        app:layout_constraintBottom_toTopOf="@+id/serviceAddressText"
+        app:layout_constraintEnd_toEndOf="@+id/serviceAddressText"
+        app:layout_constraintTop_toBottomOf="@+id/fullNameText"
         app:layout_constraintVertical_bias="0.5" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/fullNameText"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:fontFamily="serif-monospace"
@@ -238,13 +239,13 @@
         android:textColor="#634801"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView14"
-        app:layout_constraintEnd_toEndOf="@+id/textView14"
-        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        app:layout_constraintBottom_toTopOf="@+id/phoneNumberText"
+        app:layout_constraintEnd_toEndOf="@+id/phoneNumberText"
+        app:layout_constraintTop_toBottomOf="@+id/problemDurationText"
         app:layout_constraintVertical_bias="0.5" />
 
     <TextView
-        android:id="@+id/textView16"
+        android:id="@+id/emailAddressText"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:fontFamily="serif-monospace"
@@ -252,13 +253,13 @@
         android:textColor="#634801"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView17"
-        app:layout_constraintEnd_toEndOf="@+id/textView17"
-        app:layout_constraintTop_toBottomOf="@+id/textView15"
+        app:layout_constraintBottom_toTopOf="@+id/requestedTimeText"
+        app:layout_constraintEnd_toEndOf="@+id/requestedTimeText"
+        app:layout_constraintTop_toBottomOf="@+id/serviceAddressText"
         app:layout_constraintVertical_bias="0.5" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/problemDurationText"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:fontFamily="serif-monospace"
@@ -266,27 +267,29 @@
         android:textColor="#634801"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView13"
-        app:layout_constraintEnd_toEndOf="@+id/textView13"
-        app:layout_constraintTop_toBottomOf="@+id/textView11"
+        app:layout_constraintBottom_toTopOf="@+id/fullNameText"
+        app:layout_constraintEnd_toEndOf="@+id/fullNameText"
+        app:layout_constraintTop_toBottomOf="@+id/insectTypeText"
         app:layout_constraintVertical_bias="0.5" />
 
     <TextView
-        android:id="@+id/textView15"
+        android:id="@+id/serviceAddressText"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="94dp"
         android:fontFamily="serif-monospace"
         android:text="@string/serviceAddress_txt"
         android:textColor="#634801"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView16"
-        app:layout_constraintEnd_toEndOf="@+id/textView16"
-        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        app:layout_constraintBottom_toTopOf="@+id/emailAddressText"
+        app:layout_constraintEnd_toEndOf="@+id/emailAddressText"
+        app:layout_constraintStart_toEndOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/phoneNumberText"
         app:layout_constraintVertical_bias="0.5" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/insectTypeText"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:fontFamily="serif-monospace"
@@ -294,8 +297,8 @@
         android:textColor="#634801"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView12"
-        app:layout_constraintEnd_toEndOf="@+id/textView12"
+        app:layout_constraintBottom_toTopOf="@+id/problemDurationText"
+        app:layout_constraintEnd_toEndOf="@+id/problemDurationText"
         app:layout_constraintTop_toBottomOf="@+id/infoCorrectYN"
         app:layout_constraintVertical_bias="0.5" />
 </androidx.constraintlayout.widget.ConstraintLayout>

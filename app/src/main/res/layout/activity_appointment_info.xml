@@ -11,13 +11,10 @@
         android:id="@+id/SaveThePollinatorsCert"
         android:layout_width="169dp"
         android:layout_height="140dp"
-        android:layout_marginTop="13dp"
-        android:layout_marginBottom="10dp"
         android:contentDescription="@string/img_description2"
         app:layout_constraintBottom_toTopOf="@+id/insectType"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/insectType"
+        app:layout_constraintStart_toStartOf="@+id/insectType"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.5"
         app:srcCompat="@drawable/crittermccool2" />
@@ -32,9 +29,8 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/fullName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/fullName"
+        app:layout_constraintStart_toStartOf="@+id/fullName"
         app:layout_constraintTop_toBottomOf="@+id/problemDuration"
         app:layout_constraintVertical_bias="0.5" />
 
@@ -49,9 +45,8 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/Duration_txt"
         app:layout_constraintVertical_bias="0.5" />
 
@@ -68,9 +63,8 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/serviceAddress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/serviceAddress"
+        app:layout_constraintStart_toStartOf="@+id/serviceAddress"
         app:layout_constraintTop_toBottomOf="@+id/fullName"
         app:layout_constraintVertical_bias="0.5" />
 
@@ -87,9 +81,8 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/emailAddress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/emailAddress"
+        app:layout_constraintStart_toStartOf="@+id/emailAddress"
         app:layout_constraintTop_toBottomOf="@+id/phoneNumber"
         app:layout_constraintVertical_bias="0.5" />
 
@@ -105,21 +98,18 @@
         android:textColor="#634801"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/Next_Btn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/appointmentInfo_back_btn"
         app:layout_constraintTop_toBottomOf="@+id/serviceAddress"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintVertical_bias="0.5"
+        tools:layout_editor_absoluteX="26dp" />
 
     <Button
         android:id="@+id/Next_Btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="148dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="33dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="58dp"
+        android:layout_marginBottom="33dp"
         android:backgroundTint="#3A2902"
         android:fontFamily="serif-monospace"
         android:text="@string/next_btn"
@@ -127,9 +117,9 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/appointmentInfo_back_btn"
-        app:layout_constraintTop_toBottomOf="@+id/emailAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/emailAddress"
+        app:layout_constraintVertical_bias="0.673" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/fullName"
@@ -143,9 +133,8 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/phoneNumber"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/phoneNumber"
+        app:layout_constraintStart_toStartOf="@+id/phoneNumber"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintVertical_bias="0.5" />
 
@@ -153,11 +142,9 @@
         android:id="@+id/insectType"
         android:layout_width="358dp"
         android:layout_height="45dp"
-        android:layout_marginBottom="13dp"
-        app:layout_constraintBottom_toTopOf="@+id/specifyOther"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/Duration_txt"
+        app:layout_constraintEnd_toEndOf="@+id/Duration_txt"
+        app:layout_constraintStart_toStartOf="@+id/Duration_txt"
         app:layout_constraintTop_toBottomOf="@+id/SaveThePollinatorsCert"
         app:layout_constraintVertical_bias="0.5" />
 
@@ -171,27 +158,8 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/problemDuration"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/specifyOther"
-        app:layout_constraintVertical_bias="0.5" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/specifyOther"
-        android:layout_width="358dp"
-        android:layout_height="wrap_content"
-        android:fontFamily="serif-monospace"
-        android:hint="@string/other_hint"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="#634801"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/Duration_txt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/problemDuration"
+        app:layout_constraintStart_toStartOf="@+id/problemDuration"
         app:layout_constraintTop_toBottomOf="@+id/insectType"
         app:layout_constraintVertical_bias="0.5" />
 
@@ -200,7 +168,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="54dp"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="148dp"
+        android:layout_marginBottom="24dp"
         android:backgroundTint="#3A2902"
         android:fontFamily="serif-monospace"
         android:text="@string/appointmentInfo_back_btn"
@@ -210,8 +180,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/Next_Btn"
         app:layout_constraintEnd_toStartOf="@+id/Next_Btn"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailAddress" />
+        app:layout_constraintTop_toTopOf="@+id/Next_Btn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

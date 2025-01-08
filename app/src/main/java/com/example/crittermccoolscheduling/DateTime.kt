@@ -1,5 +1,6 @@
 package com.example.crittermccoolscheduling
 
+import AppointmentInfo
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -14,19 +15,27 @@ class DateTime : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        // Get all previously passed data
+        val fullName = intent.getStringExtra("fullName")
+        val phoneNumber = intent.getStringExtra("phoneNumber")
+        val emailAddress = intent.getStringExtra("emailAddress")
+        val serviceAddress = intent.getStringExtra("serviceAddress")
+        val insectType = intent.getStringExtra("insectType")
+        val problemDuration = intent.getStringExtra("problemDuration")
+
         //Handler for the "Finish" button
         val Finish_Btn: Button = findViewById(R.id.Finish_Btn)
         Finish_Btn.setOnClickListener{
-            //Ensure that information is entered before the user continues
-            val time_txt = findViewById<EditText>(R.id.time).text.toString().trim()
-            val date_txt = findViewById<EditText>(R.id.date).text.toString().trim()
-            if(time_txt.isEmpty() || date_txt.isEmpty()){
-                Toast.makeText(applicationContext, "*Please fill in all fields", Toast.LENGTH_SHORT).show()
-            }
-            else{
-                val intent = Intent(this, InfoConfirmation::class.java)
-                startActivity(intent)
-            }
+            // Pass everything to the InfoConfirmation activity
+            val intent = Intent(this, InfoConfirmation::class.java)
+            intent.putExtra("fullName", fullName)
+            intent.putExtra("phoneNumber", phoneNumber)
+            intent.putExtra("emailAddress", emailAddress)
+            intent.putExtra("serviceAddress", serviceAddress)
+            intent.putExtra("insectType", insectType)
+            intent.putExtra("problemDuration", problemDuration)
+            //ADD DATE
+            //ADD TIME
         }
 
         //Handler for the "Back" button
