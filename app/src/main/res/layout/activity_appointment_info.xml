@@ -8,7 +8,7 @@
     tools:context=".AppointmentInfo">
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/SaveThePollinatorsCert"
         android:layout_width="169dp"
         android:layout_height="140dp"
         android:layout_marginTop="13dp"
@@ -158,7 +158,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/SaveThePollinatorsCert"
         app:layout_constraintVertical_bias="0.5" />
 
     <TextView

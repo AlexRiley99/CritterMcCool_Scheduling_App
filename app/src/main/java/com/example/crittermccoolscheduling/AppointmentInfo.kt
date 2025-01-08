@@ -1,14 +1,14 @@
 package com.example.crittermccoolscheduling
 
 import android.content.Intent
+import android.os.Build.VERSION_CODES.R
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.ArrayAdapter
 import android.widget.Button
-import android.widget.EditText
 import android.widget.Spinner
-import android.widget.Toast
+import com.example.crittermccoolscheduling.R
 
 
 class AppointmentInfo : AppCompatActivity() {
