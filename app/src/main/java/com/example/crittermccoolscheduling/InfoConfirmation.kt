@@ -1,15 +1,9 @@
 package com.example.crittermccoolscheduling
 
-import AppointmentInfo
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import org.w3c.dom.Text
 
 class InfoConfirmation : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

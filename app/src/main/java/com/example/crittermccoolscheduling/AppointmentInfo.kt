@@ -1,4 +1,5 @@
-import com.example.crittermccoolscheduling.R
+package com.example.crittermccoolscheduling
+
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -7,9 +8,6 @@ import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.Spinner
 import android.widget.EditText
-import com.example.crittermccoolscheduling.DateTime
-import com.example.crittermccoolscheduling.MainActivity
-
 
 class AppointmentInfo : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,7 +36,7 @@ class AppointmentInfo : AppCompatActivity() {
                 val selectedItem = insectType.selectedItem//Item selected in the insectType spinner
 
                 val intent = Intent(this, DateTime::class.java)
-                    startActivity(intent)
+                startActivity(intent)
                     intent.putExtra("fullName", fullName_txt.text.toString())
                     intent.putExtra("phoneNumber", phoneNumber_txt.text.toString())
                     intent.putExtra("emailAddress", emailAddress_txt.text.toString())
