@@ -23,7 +23,7 @@ class DateTime : AppCompatActivity() {
         /*SPINNERS*/
         // Spinner for Time
         val Time: Spinner = findViewById(R.id.time) // Defining spinner
-        val timeItems = listOf("*Request A Time", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm")
+        val timeItems = listOf("*Request A Time Range", "Morning", "Afternoon", "Evening")
 
         // ArrayAdapter to bind the list to the spinner
         val timeAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, timeItems)
@@ -33,7 +33,7 @@ class DateTime : AppCompatActivity() {
 
         // Spinner for Date
         val Date: Spinner = findViewById(R.id.date)
-        val dateItems = listOf("*Request A Date", "This coming Monday", "This coming Tuesday", "This coming Wednesday", "This coming Thursday", "This coming Friday", "Other")
+        val dateItems = listOf("*Request A Date Range", "This week", "Next week", "Other")
         // ArrayAdapter for Date
         val dateAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, dateItems)
         dateAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
