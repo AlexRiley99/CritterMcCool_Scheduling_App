@@ -2,6 +2,7 @@ package com.example.crittermccoolscheduling
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -46,7 +47,7 @@ class InfoConfirmation : AppCompatActivity() {
             val repository = AppointmentRepository(this) // Instance of AppointmentRepository
 
             // Insert the appointment data into the repository
-            repository.insertAppointment(
+            val appointmentId = repository.insertAppointment(
                 fullName ?: "",
                 phoneNumber ?: "",
                 emailAddress ?: "",
@@ -57,9 +58,16 @@ class InfoConfirmation : AppCompatActivity() {
                 requestedDate ?: ""
             )
 
-            // Navigate to the confirmation page
-            val intent = Intent(this, Confirmation::class.java)
-            startActivity(intent)
+            //If insertion failes, log error
+            //Else insert appointment, log success, and go to next page
+            if (appointmentId == -1L) {
+                Log.e("InfoConfirmation", "Error inserting appointment")
+            } else {
+                Log.d("InfoConfirmation", "Appointment inserted with ID: $appointmentId")
+                // Navigate to the confirmation page
+                val intent = Intent(this, Confirmation::class.java)
+                startActivity(intent)
+            }
         }
     }
 }

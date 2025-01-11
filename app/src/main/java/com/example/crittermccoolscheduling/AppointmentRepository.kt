@@ -6,26 +6,26 @@ import android.content.Context
 //Ensures other parts of the app don't directly interact with the database
 
 class AppointmentRepository(context: Context) {
-    private val databaseHelper = DatabaseHelper(context)
+    private val dbHelper = DatabaseHelper(context)
 
     //Insert appointment
-    fun insertAppointment(Name: String, Phone:String, Email: String, Address: String, Insect_Type: String, Problem_Duration: String, Date: String, Time: String){
-        return databaseHelper.insertAppointment(Name, Phone, Email, Address, Insect_Type, Problem_Duration, Date, Time)
+    fun insertAppointment(Name: String, Phone:String, Email: String, Address: String, Insect_Type: String, Problem_Duration: String, Date: String, Time: String) : Long {
+        return dbHelper.insertAppointment(Name, Phone, Email, Address, Insect_Type, Problem_Duration, Date, Time)
     }
 
     fun getAppointmentByID(ID: Long) : Appointment?{
-        return databaseHelper.getAppointmentById(ID)
+        return dbHelper.getAppointmentById(ID)
     }
 
     fun getAllAppointments() : List<Appointment>{
-        return databaseHelper.getAllAppointments()
+        return dbHelper.getAllAppointments()
     }
 
     fun deleteAppointment(ID: Long): Int{
-        return databaseHelper.deleteAppointment(ID)
+        return dbHelper.deleteAppointment(ID)
     }
 
     fun deleteAllAppointments(){
-        databaseHelper.deleteAllAppointments()
+        dbHelper.deleteAllAppointments()
     }
 }

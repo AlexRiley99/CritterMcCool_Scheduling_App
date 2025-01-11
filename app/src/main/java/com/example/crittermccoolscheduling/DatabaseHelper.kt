@@ -59,21 +59,22 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         onCreate(db) //Recreate table when upgrading database
     }
 
-    fun insertAppointment(Name: String, Phone: String, Email: String, Address: String, Insect_Type: String, Problem_Duration: String, Date: String, Time: String){
-        val db = writableDatabase //get a writable SQLiteDatabase instance
-        val contentValues = ContentValues()
-        contentValues.put(COLUMN_NAME, Name)
-        contentValues.put(COLUMN_PHONE, Phone)
-        contentValues.put(COLUMN_EMAIL, Email)
-        contentValues.put(COLUMN_ADDRESS, Address)
-        contentValues.put(COLUMN_INSECT_TYPE, Insect_Type)
-        contentValues.put(COLUMN_PROBLEM_DURATION, Problem_Duration)
-        contentValues.put(COLUMN_DATE, Date)
-        contentValues.put(COLUMN_TIME, Time)
+    fun insertAppointment(Name: String, Phone: String, Email: String, Address: String, Insect_Type: String, Problem_Duration: String, Date: String, Time: String): Long {
+        val db = writableDatabase
+        val contentValues = ContentValues().apply {
+            put(COLUMN_NAME, Name)
+            put(COLUMN_PHONE, Phone)
+            put(COLUMN_EMAIL, Email)
+            put(COLUMN_ADDRESS, Address)
+            put(COLUMN_INSECT_TYPE, Insect_Type)
+            put(COLUMN_PROBLEM_DURATION, Problem_Duration)
+            put(COLUMN_DATE, Date)
+            put(COLUMN_TIME, Time)
+        }
 
-        //Insert data into the table
-        db.insert(TABLE_APPOINTMENTS, null, contentValues)
-        db.close() //close database after operations
+        val id = db.insert(TABLE_APPOINTMENTS, null, contentValues)  // Insert and return the new row ID
+        db.close()
+        return id
     }
 
     fun getAllAppointments(): List<Appointment>{
