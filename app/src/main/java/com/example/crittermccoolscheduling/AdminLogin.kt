@@ -12,24 +12,24 @@ class AdminLogin : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_admin_login)
 
-        val username_txt = findViewById<EditText>(R.id.username_txt) //Username input
+        val id_txt = findViewById<EditText>(R.id.id_txt) //Username input
         val password_txt = findViewById<EditText>(R.id.password_txt)//Password input
 
         //Handler for "Sign In" button
         val login_Btn: Button = findViewById(R.id.login_btn)
         login_Btn.setOnClickListener{
                 //Get the text input when the button is clicked
-                val username = username_txt.text.toString().trim()
+                val id = id_txt.text.toString().trim()
                 val password = password_txt.text.toString().trim()
 
-            if(username == "EricCritterMcCool74$" && password == "BeeLegend100%"){
+            if(id == "B7v&1rPz9@" && password == "BeeLegend100%"){
                 val intent = Intent(this, Admin::class.java)
                 startActivity(intent)
             }
             else{
                 //Display message and clear input fields if the credentials are incorrect
                 Toast.makeText(applicationContext, "*Invalid credentials", Toast.LENGTH_SHORT).show()
-                username_txt.text.clear()
+                id_txt.text.clear()
                 password_txt.text.clear()
             }
 
