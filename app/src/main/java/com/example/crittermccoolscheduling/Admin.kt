@@ -1,6 +1,8 @@
 package com.example.crittermccoolscheduling
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -16,6 +18,8 @@ class Admin : AppCompatActivity() {
     private var tableItems: MutableList<Appointment> = mutableListOf()
     private lateinit var dbHelper: DatabaseHelper
     private lateinit var appointmentRepository: AppointmentRepository
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,6 +47,13 @@ class Admin : AppCompatActivity() {
 
         // Load data from the database
         loadTableData()
+
+        //Go back to Main activity when Exit button is clicked
+        val Exit_Btn: Button = findViewById(R.id.exitButton)
+        Exit_Btn.setOnClickListener{
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun loadTableData() {
@@ -61,4 +72,5 @@ class Admin : AppCompatActivity() {
             Toast.makeText(this, "Failed to delete item", Toast.LENGTH_SHORT).show()
         }
     }
+
 }

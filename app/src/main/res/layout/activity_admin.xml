@@ -12,16 +12,15 @@
         android:id="@+id/appointmentRequests"
         android:layout_width="369dp"
         android:layout_height="52dp"
-        android:layout_marginBottom="10dp"
         android:fontFamily="sans-serif-condensed"
         android:textAlignment="center"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/recyclerView"
-        app:layout_constraintEnd_toEndOf="@+id/recyclerView"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="@+id/recyclerView"
+        app:layout_constraintEnd_toEndOf="@+id/welcome"
+        app:layout_constraintStart_toStartOf="@+id/welcome"
         app:layout_constraintTop_toBottomOf="@+id/welcome"
+        app:layout_constraintVertical_bias="0.5"
         tools:text="@string/appointmentRequests" />
 
     <TextView
@@ -33,22 +32,41 @@
         android:textSize="39sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/appointmentRequests"
-        app:layout_constraintEnd_toEndOf="@+id/appointmentRequests"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="@+id/appointmentRequests"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.5"
         tools:text="Welcome, Critter McCool!" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
-        android:layout_width="402dp"
-        android:layout_height="572dp"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
         android:backgroundTint="#F2ECCB"
+        app:layout_constraintBottom_toTopOf="@id/exitButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appointmentRequests" />
+
+    <Button
+        android:id="@+id/exitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="323dp"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/appointmentRequests" />
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView"
+        android:textColor="#F2ECCB"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:backgroundTint="#3A2902"
+        android:fontFamily="sans-serif-condensed"
+        tools:text="Exit" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

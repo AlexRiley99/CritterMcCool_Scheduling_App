@@ -104,6 +104,7 @@
             android:textColor="#F2ECCB"
             android:textSize="16sp"
             android:textStyle="bold"
-            tools:text="@string/deleteButton" />
+            android:visibility="visible"
+            tools:text="Delete" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>
