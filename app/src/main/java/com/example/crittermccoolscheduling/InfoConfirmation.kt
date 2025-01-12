@@ -2,6 +2,7 @@ package com.example.crittermccoolscheduling
 
 import android.content.Intent
 import android.os.Bundle
+import android.provider.ContactsContract.Data
 import android.util.Log
 import android.widget.Button
 import android.widget.TextView
@@ -44,7 +45,8 @@ class InfoConfirmation : AppCompatActivity() {
         // Save info to the database and move on to the next page
         val Yes_Btn: Button = findViewById(R.id.yesBtn)
         Yes_Btn.setOnClickListener{
-            val repository = AppointmentRepository(this) // Instance of AppointmentRepository
+            val databaseHelper = DatabaseHelper(this) //pass the context to DatabaseHelper
+            val repository = AppointmentRepository(databaseHelper) // Instance of AppointmentRepository
 
             // Insert the appointment data into the repository
             val appointmentId = repository.insertAppointment(

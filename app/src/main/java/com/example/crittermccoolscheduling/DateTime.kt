@@ -56,8 +56,8 @@ class DateTime : AppCompatActivity() {
             intent.putExtra("serviceAddress", serviceAddress)
             intent.putExtra("insectType", insectType)
             intent.putExtra("problemDuration", problemDuration)
-            intent.putExtra("requestedTime", selectedTime) // Change the key to "requestedTime"
-            intent.putExtra("requestedDate", selectedDate) // Change the key to "requestedDate"
+            intent.putExtra("requestedTime", selectedTime)
+            intent.putExtra("requestedDate", selectedDate)
 
             // Start info confirmation
             startActivity(intent)

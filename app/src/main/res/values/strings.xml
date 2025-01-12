@@ -15,14 +15,15 @@
 
     //Admin Login
     <string name="adminLogin_header">Sign In As Administrator</string>
-    <string name="id_hint">ID</string>
+    <string name="id_hint">Identification Code</string>
     <string name="password_hint">Password</string>
     <string name="login_btn">Sign In</string>
     <string name="adminLogin_back_btn">Back</string>
 
     //Admin
     <string name="welcome">Welcome, Critter McCool!</string>
-    <string name="appointmentRequests">Here are your appointment requests</string>
+    <string name="appointmentRequests">Here are your appointment requests:</string>
+    <string name="deleteButton">Delete</string>
 
     //Appointment Info
     <string name="duration">*How Long Has The Problem Been Going On?</string>
