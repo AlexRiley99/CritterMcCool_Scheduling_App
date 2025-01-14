@@ -1,15 +1,22 @@
 package com.example.crittermccoolscheduling
 
+import ApiService
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 // Adapter for displaying the list of appointments in the RecyclerView on Admin page
 class TableItemAdapter(
-    private var appointments: List<DatabaseHelper.RequestedAppointment>, // Data source (appointments list)
-    private val onDeleteClick: (DatabaseHelper.RequestedAppointment) -> Unit // Lambda function to handle delete button clicks
+    private var tableItems: MutableList<ApiService.AppointmentRequest>,
+    private var appointments: List<ApiService.AppointmentRequest>,
+    private val apiService: ApiService,
+    private val onDeleteClick: (ApiService.AppointmentRequest) -> Unit
 ) : RecyclerView.Adapter<TableItemAdapter.AppointmentViewHolder>() {
 
     // ViewHolder for the RecyclerView
@@ -25,7 +32,7 @@ class TableItemAdapter(
         val deleteButton: View = itemView.findViewById(R.id.deleteButton)
 
         // Bind the appointment data to the views
-        fun bind(appointment: DatabaseHelper.RequestedAppointment) {
+        fun bind(appointment: ApiService.AppointmentRequest) {
             customerName.text = appointment.fullName
             typeOfInsect.text = appointment.insectType
             durationOfProblem.text = appointment.problemDuration
@@ -40,14 +47,14 @@ class TableItemAdapter(
         }
     }
 
-    // Create new views (invoked by the layout manager)
+    // Create new views
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AppointmentViewHolder {
         val itemView = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_appointment, parent, false) // Inflate the custom item layout
         return AppointmentViewHolder(itemView)
     }
 
-    // Replace the contents of a view (invoked by the layout manager)
+    // Replace the contents of a view
     override fun onBindViewHolder(holder: AppointmentViewHolder, position: Int) {
         val appointment = appointments[position]
         holder.bind(appointment)
@@ -59,8 +66,24 @@ class TableItemAdapter(
     }
 
     // Set the new list of appointments when data changes
-    fun setItems(newAppointments: List<DatabaseHelper.RequestedAppointment>) {
+    fun setItems(newAppointments: List<ApiService.AppointmentRequest>) {
         appointments = newAppointments
         notifyDataSetChanged() // Notify the adapter that data has changed
     }
+
+    // Function to delete appointment by ID via Retrofit
+    fun deleteAppointment(appointment: ApiService.AppointmentRequest) {
+        apiService.deleteRequest(appointment.id ?: 0).enqueue(object : Callback<ApiService.ApiResponse> {
+            override fun onResponse(
+                call: Call<ApiService.ApiResponse>,
+                response: Response<ApiService.ApiResponse>
+            ) {
+
+            }
+            override fun onFailure(call: Call<ApiService.ApiResponse>, t: Throwable) {
+                Log.e("ApiError", "Failed to delete appointment: ${t.message}")
+            }
+        })
+    }
+
 }

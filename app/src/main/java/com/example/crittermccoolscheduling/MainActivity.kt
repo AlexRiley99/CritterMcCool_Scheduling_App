@@ -11,7 +11,6 @@ class MainActivity : AppCompatActivity() {
 
     // Retrofit instance for API requests
     private lateinit var retrofit: Retrofit
-    private lateinit var apiService: ApiService
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,6 +43,5 @@ class MainActivity : AppCompatActivity() {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
-        apiService = retrofit.create(ApiService::class.java)
     }
 }
